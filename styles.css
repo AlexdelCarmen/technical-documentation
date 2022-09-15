@@ -6,7 +6,56 @@ html {
     box-sizing: inherit;
 }
 
+
+:root {
+    --font-style: Roboto, sans-serif; 
+    --dark-color-1: #212529; 
+    --dark-color-2: #343a40;
+    --light-color-1: #f8f9fa; 
+    --light-color-2: #eae0d5; 
+    --header-size: 24px; 
+    --main-header-size: 32px; 
+    --paragraph-size: 16px; 
+}
+
 body {
     display: flex;
     flex-direction: row;
+    font-family: var(--font-style);
+    background-color: var(--light-color-1);
+    
+}
+
+#navbar > header {
+    font-size: var(--header-size);
+    padding: 10px 35px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--dark-color-2);
+    background-color: #FFFF00;
+}
+
+#navbar {
+    margin: -10px 40px 0 -20px;
+    min-width: 290px;
+    border-right: 4px solid var(--dark-color-2);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 101vh;
+}
+
+.nav-link {
+    color: var(--dark-color-1); 
+    text-decoration: none;
+    font-size: var(--paragraph-size);
+    padding: 13px 35px;
+}
+
+.nav-link:not(:last-of-type) {
+    border-bottom: 2px solid var(--dark-color-2);
+}
+
+
+#main-doc {
+    margin: 10px 0 0 300px;
 }
